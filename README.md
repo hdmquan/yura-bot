@@ -1,4 +1,4 @@
-# yura-bot
+# Yura Bot
 
 Discord bot that monitors @yura_hatuki Twitter and posts to Discord. Runs hourly on AWS Lambda.
 
