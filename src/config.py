@@ -1,9 +1,10 @@
 import os
-from pathlib import Path
 from typing import Any
 
 import yaml
 from pydantic import BaseModel
+
+from src.utils import PATH
 
 
 class TwitterCfg(BaseModel):
@@ -53,8 +54,7 @@ class Cfg(BaseModel):
 
 
 def load() -> Cfg:
-    cfg_path = Path(__file__).parent.parent / "config.yaml"
-    with open(cfg_path) as f:
+    with open(PATH.config) as f:
         data: dict[str, Any] = yaml.safe_load(f)
     return Cfg(**data)
 

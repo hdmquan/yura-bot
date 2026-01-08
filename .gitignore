@@ -21,6 +21,8 @@ build/
 
 *.log
 
+.state.json
+
 .idea/
 .vscode/
 *.swp

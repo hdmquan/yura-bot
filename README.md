@@ -1,4 +1,4 @@
-# Yura Bot
+# yura-bot
 
 Discord bot that monitors @yura_hatuki Twitter and posts to Discord. Runs hourly on AWS Lambda.
 
@@ -9,7 +9,8 @@ make setup
 ```
 
 Create `.env`:
-```bash
+
+```
 TWITTER_SESSION=your_session_cookie
 DISCORD_WEBHOOK_URL=your_webhook_url
 AWS_ACCESS_KEY_ID=your_key
