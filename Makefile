@@ -1,4 +1,4 @@
-.PHONY: install lint test build deploy clean run setup
+.PHONY: install lint build deploy clean run setup
 
 install:
 	poetry install
@@ -10,9 +10,6 @@ lint:
 	poetry run black .
 	poetry run ruff check .
 	poetry run mypy src
-
-test:
-	poetry run pytest
 
 build:
 	bash scripts/build_lambda.sh
