@@ -1,0 +1,3 @@
+name: yura-bot-infra
+runtime: python
+description: Infrastructure for yura-bot Twitter to Discord notifier

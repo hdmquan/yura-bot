@@ -1,0 +1,30 @@
+twitter:
+  username: "yura_hatuki"
+  max_tweets_per_check: 10
+
+discord:
+  color_default: 0x1DA1F2
+  color_media: 0xFF6B9D
+  max_description_length: 4096
+  max_field_length: 1024
+  thumbnail_width: 400
+  thumbnail_height: 400
+
+state:
+  dynamodb_table: "yura-bot-state"
+  aws_region: "us-east-1"
+  last_tweet_key: "last_tweet_id"
+
+polling:
+  interval_seconds: 3600
+  retry_backoff_base: 2
+  retry_max_attempts: 3
+
+rate_limit:
+  requests_per_window: 10
+  window_seconds: 900
+  cooldown_seconds: 300
+
+logging:
+  level: "INFO"
+  format: "<green>{time:YYYY-MM-DD HH:mm:ss}</green> | <level>{level: <8}</level> | <cyan>{name}</cyan>:<cyan>{function}</cyan> - <level>{message}</level>"
