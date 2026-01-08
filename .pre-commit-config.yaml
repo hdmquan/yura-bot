@@ -17,5 +17,5 @@ repos:
         additional_dependencies:
           - pydantic==2.10.6
           - pydantic-settings==2.7.1
-          - types-PyYAML==6.0.12.20
+          - types-PyYAML==6.0.12.20250915
           - boto3-stubs==1.35.94

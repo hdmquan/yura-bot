@@ -1,7 +1,7 @@
 import boto3
 from loguru import logger
 
-from src.config import cfg, aws_key, aws_secret, aws_region
+from src.config import aws_key, aws_region, aws_secret, cfg
 
 
 class State:
@@ -17,11 +17,10 @@ class State:
 
     def get_last_id(self) -> str | None:
         try:
-            resp = self.client.get_item(
-                TableName=self.table, Key={"id": {"S": self.key}}
-            )
+            resp = self.client.get_item(TableName=self.table, Key={"id": {"S": self.key}})
             if "Item" in resp and "value" in resp["Item"]:
-                return resp["Item"]["value"]["S"]
+                value = resp["Item"]["value"]["S"]
+                return str(value) if value else None
             return None
         except Exception as e:
             logger.error(f"get_last_id failed: {e}")
